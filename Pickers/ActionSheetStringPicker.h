@@ -50,6 +50,5 @@ typedef void(^ActionStringCancelBlock)(ActionSheetStringPicker *picker);
 - (id)initWithTitle:(NSString *)title rows:(NSArray *)strings initialSelection:(NSInteger)index doneBlock:(ActionStringDoneBlock)doneBlock cancelBlock:(ActionStringCancelBlock)cancelBlockOrNil origin:(id)origin;
 
 @property (nonatomic, copy) ActionStringDoneBlock onActionSheetDone;
-@property (nonatomic, copy) ActionStringCancelBlock onActionSheetCancel;
 
 @end

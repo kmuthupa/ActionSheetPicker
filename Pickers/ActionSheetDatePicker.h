@@ -27,11 +27,17 @@
 
 #import "AbstractActionSheetPicker.h"
 
-@interface ActionSheetDatePicker : AbstractActionSheetPicker
+@interface ActionSheetDatePicker : AbstractActionSheetPicker {
+	BOOL allowFutureDates;
+}
 
 + (id)showPickerWithTitle:(NSString *)title datePickerMode:(UIDatePickerMode)datePickerMode selectedDate:(NSDate *)selectedDate target:(id)target action:(SEL)action origin:(id)origin;
 
 - (id)initWithTitle:(NSString *)title datePickerMode:(UIDatePickerMode)datePickerMode selectedDate:(NSDate *)selectedDate target:(id)target action:(SEL)action origin:(id)origin;
+
+- (id)initWithTitle:(NSString *)title datePickerMode:(UIDatePickerMode)datePickerMode selectedDate:(NSDate *)selectedDate target:(id)target action:(SEL)action origin:(id)origin allowFutureDates:(BOOL)futureDates;
+
+- (id)initWithTitle:(NSString *)title datePickerMode:(UIDatePickerMode)datePickerMode selectedDate:(NSDate *)selectedDate target:(id)target successAction:(SEL)successAction cancelAction:(SEL)cancelAction origin:(id)origin allowFutureDates:(BOOL)futureDates;
 
 - (void)eventForDatePicker:(id)sender;
 
